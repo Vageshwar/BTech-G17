@@ -1,0 +1,34 @@
+Components Structure: (In Bracket Args received by Components)
+
+- App.js
+    - QuizHeader.js   : (userData, quizSubject)
+    - QuizBody.js     : (QuizData)
+        - QuestionBody.js : (it will take QuizData and maintain a state containing current userChoices)
+            - Question
+            - options
+            - next
+            - prev 
+        - RightPanel.js : (userChoices state received from QuestionBody)
+            - A panel of all Question list with appropriate color coding
+            - OnClick fuction on QuestionIcon should have a function that will update Question on QuestionBody
+        
+    
+UserChoice {
+    userPrn: Number,
+    attempted: [Number Array],
+    flagged: [Number Array],
+    startTime: DateTime (dd-mm-yyy hh:mm)
+    endTime: Calculate from startTime (StartTime + duration )
+}
+
+also while defining Timer look for logic of auto saving userChoice State and then closing Window
+
+The RightPanel Component still doesn't have an OnClick on cards it depends how we are going to manage state we have 2 days to complete atleast some UI to show
+Read about state management and also let's complete before friday eve
+Task :
+learn about State management
+Complete QuizBody
+Complete RightPanel (if not possible I will do it in the eve)
+
+
+sbpatil29@gmail.com
